@@ -18,7 +18,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/main.css',
+    "@/assets/css/main.css",
+    // "https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800",
+    "@/assets/css/fontawesome-all.min.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -30,29 +32,20 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxt/postcss8',
+    // '@nuxt/postcss8',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-  menu: [
-    {
-      name: 'Home',
-      link: '/',
-    },
-    {
-      name: 'About Us',
-      link: '/about',
-    },
-  ],
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
-    },
+    // postcss: {
+    //   plugins: {
+    //     // tailwindcss: {},
+    //     // autoprefixer: {},
+    //   },
+    // },
   }
 }

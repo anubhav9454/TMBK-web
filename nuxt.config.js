@@ -36,7 +36,16 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-
+  menu: [
+    {
+      name: 'Home',
+      link: '/',
+    },
+    {
+      name: 'About Us',
+      link: '/about',
+    },
+  ],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {

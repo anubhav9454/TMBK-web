@@ -70,3 +70,18 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+
+
+
+
+
+
+#------------------
+Task to do :
+
+1. Changes in en from fr (jahan jahan change huwa hai.)
+2. Extra content milega abhi.
+3. Whatsapp click to chat.
+4. Start creating UI Block.
+5. 

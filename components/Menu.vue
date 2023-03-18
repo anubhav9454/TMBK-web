@@ -26,7 +26,7 @@
               <!-- Nav -->
                 <nav id="nav">
                   <ul>
-                    <li class="current"><a href="index.html">Welcome</a></li>
+                    <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
                     <!-- <li>
                       <a href="#">Dropdown</a>
                       <ul>
@@ -48,7 +48,7 @@
                     <li><a href="right-sidebar.html">Right Sidebar</a></li>
                     <li><a href="no-sidebar.html">No Sidebar</a></li> -->
 
-                    <li v-for="(p, key) in pages" :key="key" > 
+                    <li v-for="(p, key) in pages" :key="key" :class="check_current(p.name)?'':''" @click="current_page(p.name)" > 
                     <nuxt-link :to="p.link">                        
                       {{ p.name }} 
                     </nuxt-link>
@@ -68,6 +68,14 @@
         return {
             pages: this.$store.state.fix.menu,
         }
+    },
+    methods:{
+      current_page(page){
+        this.$store.commit('fix/set_current_page', page);
+      },
+      check_current(page){
+        return this.$store.state.fix.current_page == page
+      }
     }
   }
   </script>

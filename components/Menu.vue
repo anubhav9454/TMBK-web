@@ -48,7 +48,7 @@
                     <li><a href="right-sidebar.html">Right Sidebar</a></li>
                     <li><a href="no-sidebar.html">No Sidebar</a></li> -->
 
-                    <li v-for="(p, key) in pages" :key="key" :class="check_current(p.name)?'':''" @click="current_page(p.name)" > 
+                    <li v-for="(p, key) in pages" :key="key" :class="check_current(p.name)?'current':''" @click="current_page(p.name)" > 
                     <nuxt-link :to="p.link">                        
                       {{ p.name }} 
                     </nuxt-link>

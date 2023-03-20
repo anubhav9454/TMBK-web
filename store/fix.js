@@ -14,7 +14,7 @@ export const state = () =>({
         },
     ],
     
-    current_page: '',
+    current_page: 'Welcome',
     current_language:'',
     list_of_language:['en','fr'],
 
@@ -51,9 +51,9 @@ export const state = () =>({
           From design to completion, TMBK BUSINESS guarantees you buildings according to architectural standards, a dream home with longevity, according to your budget and your preferences.      
           `,          
           fr: 
-          ```
+          `
           De la conception à la réalisation, TMBK BUSINESS Sarl vous garantit des bâtisses selon les normes architectural modernes, des demeure de rêve d’une longévité maximale, selon votre budget et vos préférences.
-          ```
+          `
         },
         hemm_rental : {
           en : 
@@ -76,7 +76,26 @@ export const state = () =>({
           `
         },
       },
-    }
+    },
+    box_data :[
+      {image:'/images/a01.png',
+      content:"Facilitation de l'obtention d'un passeport congolais",},
+      {image:'/images/flight.jpg',
+      content:"La vente des billets d'avion vers toutes les destinations",},
+      {image:'/images/hot.png',
+      content:"Réservation hotel dans le monde",},
+      {image:'/images/im.jpg',
+      content:"Facilitation de l'obtention de visa touristique, étude, de travail, de maladie etc.",},
+      {image:'/images/port.jpg',
+      content:"Réservation hotel dans le monde",},
+      {image:'/images/study.jpg',
+      content:"Facilitation de l'obtention d'une inscription a l'étranger.",},
+      {image:'/images/traduction.jpg',
+      content:'Traduction des documents scolaires et administratifs en Anglais, en français, en russe etc.',},
+      {image:'/images/x1.jpg',
+      content:"Réservation hotel dans le monde",},
+    ]
+  
 })
 
 export const mutations = {
@@ -85,7 +104,7 @@ export const mutations = {
   },
   set_current_page(state, element){
     console.log('Changing page-->')
-    state?.current_page = element
+    state.current_page = element
     console.log('Current Page -->', element)
   }
 }

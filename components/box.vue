@@ -1,10 +1,10 @@
 <template>
     <section class="box feature">
-    <a href="#" class="image featured"><img :src="image" alt="" /></a>
+    <a href="#" class="image featured"><img :src="image" alt="" width="300" height="220"/></a>
     <div class="inner">
         <header>
             <!-- <h2>Put something here</h2> -->
-            <p>{{ content }}</p>
+            <h2>{{ content }}</h2>
         </header>
         <!-- <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p> -->
     </div>
@@ -23,8 +23,8 @@ export default {
             required: true
         },
     },
-    mount(){
-        console.log(...data)
-    }
+    // mount(){
+    //     console.log(...data)
+    // }
 }
 </script>

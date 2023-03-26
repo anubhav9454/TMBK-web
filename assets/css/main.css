@@ -1789,6 +1789,7 @@ input, select, textarea {
 
 			.box.feature .inner {
 				padding: 4em 2em 3em 2em;
+				min-height: 230px;
 			}
 
 			.box.feature h2 {

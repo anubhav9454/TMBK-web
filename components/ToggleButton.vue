@@ -1,10 +1,19 @@
 <template>
     <label for="toggle_button">
-        <span v-if="isActive">English</span>
-        <span v-if="! isActive">French</span>
+        <!-- <span v-if="isActive">English</span>
+        <span v-if="!isActive">French</span> -->
 
-        <input type="checkbox" id="toggle_button" v-model="checkedValue">
-        <span class="toggle__switch"></span>
+        <!-- <input type="checkbox" id="toggle_button" v-model="checkedValue">
+        <span class="toggle__switch"></span> -->
+        <input type="checkbox" id="switch"
+                    class="checkbox" />
+        <label for="switch" class="toggle">
+             
+ 
+<p>OFF    ON</p>
+ 
+ 
+        </label>
     </label>
 </template>
 <script>
@@ -41,7 +50,55 @@ export default {
 </script>
 
 <style scoped>
-.toggle__button {
+h1 {
+            color: green;
+        }
+               
+        /* toggle in label designing */
+        .toggle {
+            position : relative ;
+            display : inline-block;
+            width : 100px;
+            height : 52px;
+            background-color: red;
+            border-radius: 30px;
+            border: 2px solid gray;
+        }
+               
+        /* After slide changes */
+        .toggle:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            top: 1px;
+            left: 1px;
+            transition:  all 0.5s;
+        }
+               
+        /* Toggle text */
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+               
+        /* Checkbox checked effect */
+        .checkbox:checked + .toggle::after {
+            left : 49px;
+        }
+               
+        /* Checkbox checked toggle label bg color */
+        .checkbox:checked + .toggle {
+            background-color: green;
+        }
+               
+        /* Checkbox vanished */
+        .checkbox {
+            display : none;
+        }
+/* .toggle__button {
     vertical-align: middle;
     user-select: none;
     cursor: pointer;
@@ -86,5 +143,5 @@ export default {
     background: #4D4D4D;
     box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
     opacity:0;
-}
+} */
 </style>

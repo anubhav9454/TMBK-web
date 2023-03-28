@@ -1,18 +1,9 @@
 <template>
-    <!-- <div class="bg-slate-200 p-10">
-    <div class=" flex items-center justify-between">
-      <div class="flex px-2 items-center justify-around">
-        <div class="bg-rose-500 font-semibold text-5xl text-white font-serif px-2 rounded-lg">TMBK</div>
-        <div class="font-bold">TMBK@Business</div>
-      </div>
-      <div class="flex gap-8">
-        <div class="text-slate-800 hover:underline font-semibold" v-for="(p, key) in pages" :key="key">
-            <nuxt-link :to="p.link">{{ p.name }}</nuxt-link>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div id="page-wrapper"> 
+    <div>
+      <language-toggle @languageChanged="changeLanguage" />
+    <p>{{ message }}</p>
+    </div>
     <!-- Header -->
           <div id="header-wrapper">
             <header id="header" class="container">
@@ -26,27 +17,6 @@
               <!-- Nav -->
                 <nav id="nav">
                   <ul>
-                    <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
-                    <!-- <li>
-                      <a href="#">Dropdown</a>
-                      <ul>
-                        <li><a href="#">Lorem ipsum dolor</a></li>
-                        <li><a href="#">Magna phasellus</a></li>
-                        <li>
-                          <a href="#">Phasellus consequat</a>
-                          <ul>
-                            <li><a href="#">Lorem ipsum dolor</a></li>
-                            <li><a href="#">Phasellus consequat</a></li>
-                            <li><a href="#">Magna phasellus</a></li>
-                            <li><a href="#">Etiam dolore nisl</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Veroeros feugiat</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                    <li><a href="no-sidebar.html">No Sidebar</a></li> -->
 
                     <li v-for="(p, key) in pages" :key="key" :class="check_current(p.name)?'current':''" @click="current_page(p.name)" > 
                     <nuxt-link :to="p.link">                        
@@ -66,29 +36,28 @@
                 style="--darkreader-inline-color:#ffffee;" data-darkreader-inline-color="">
                   <svg viewBox="0 0 32 32" style="width: 100%; height: 50px; fill: black; stroke: none; --darkreader-inline-fill:#ffffff; --darkreader-inline-stroke:none;" 
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                  data-darkreader-inline-fill="" data-darkreader-inline-stroke="">
-                      
-                      <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"></path>
+                  data-darkreader-inline-fill="" data-darkreader-inline-stroke="">  
+                    <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"></path>
                   </svg>
                 </a>
               </div>
             </div>
           </div>
-          <div>
-            <ToggleButton />
-          </div>
+
   </div>
 </template>
 <script>
-import ToggleButton from './ToggleButton.vue';
+import { computed } from 'vue';
+import LanguageToggle from './LanguageToggle.vue';
 
   export default {
     components: {
-        ToggleButton
+      LanguageToggle
     },
     data(){
         return {
             pages: this.$store.state.fix.menu,
+            language: 'en',
         }
     },
     methods:{
@@ -97,8 +66,18 @@ import ToggleButton from './ToggleButton.vue';
       },
       check_current(page){
         return this.$store.state.fix.current_page == page
+      },
+      changeLanguage(newLanguage) {
+      this.language = newLanguage;
       }
-    }
+    },
+    computed:{
+      message() {
+      return this.language === 'fr'
+        ? 'Bonjour, comment ça va?'
+        : 'Hello, how are you?';
+    },
+    },
   }
   </script>
   

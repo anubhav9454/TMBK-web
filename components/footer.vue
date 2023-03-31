@@ -30,9 +30,10 @@
 										<section class="last">
 											<h2>About us</h2>
 											<p>
-                                                <b>TMBK BUSINESS Sarl</b> is a company under Congolese law based in the city of Lubumbashi, in the province of Haut-Katanga in the Democratic Republic of Congo since 2017.
+                                                <!-- <b>TMBK BUSINESS Sarl</b> is a company under Congolese law based in the city of Lubumbashi, in the province of Haut-Katanga in the Democratic Republic of Congo since 2017.
                                                     This company (TMBK BUSINESS) offers services (divided into branches) in several areas including: travel facilitation, construction, rental of construction equipment, drilling of filter wells, supply of goods and equipment and sales of services, placement service .
-                                                    Our experience in these areas produces quality work with great satisfaction.
+                                                    Our experience in these areas produces quality work with great satisfaction. -->
+                                                    {{about_us}}
                                             </p>
 											<a href="#" class="button icon solid fa-arrow-circle-right">Continue Reading</a>
 										</section>
@@ -126,3 +127,32 @@
     </div>
     </div>
 </template>
+<script>
+    export default {
+        data(){
+            return {
+                lang: this.$store.state.fix.current_language,
+                about_us: this.$store.state.fix.data.about_us_content[this.$store.state.fix.current_language]
+            }
+        },
+        computed:{
+            get_lang(){
+                return this.$store.state.fix.current_language
+            }
+        },
+        mounted(){
+            this.$store.watch(
+                (state) => state.fix.current_language,
+                (newVal, oldVal) =>{
+                    this.about_us = this.$store.state.fix.data.about_us_content[newVal]
+                }
+            )
+        },
+
+        methods : {
+            check(){
+                console.log(this.lang)
+            }
+        }
+    }
+</script>

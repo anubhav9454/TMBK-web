@@ -1,10 +1,6 @@
 <template>
     <div class="language-toggle">
-      <toggle-switch v-model="isFrench" />
-      <select v-model="selectedLanguage" :disabled="isFrench">
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-      </select>
+      
     </div>
   </template>
   
@@ -20,6 +16,11 @@
         isFrench: false,
         selectedLanguage: 'en',
       };
+    },
+    methods:{
+      handleChange(value){
+        console.log("changed as -->", value)
+      }
     },
     watch: {
       selectedLanguage(newLanguage) {

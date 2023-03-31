@@ -15,7 +15,7 @@ export const state = () =>({
     ],
     
     current_page: 'Welcome',
-    current_language:'',
+    current_language:'en',
     list_of_language:['en','fr'],
 
     data : {
@@ -106,5 +106,10 @@ export const mutations = {
     console.log('Changing page-->')
     state.current_page = element
     console.log('Current Page -->', element)
+  },
+  set_current_lang(state,element){
+    console.log('Changing Language')
+    state.current_language = element
+    console.log('Current Language -->', element)
   }
 }

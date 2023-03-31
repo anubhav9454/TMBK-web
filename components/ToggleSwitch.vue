@@ -1,28 +1,45 @@
 <template>
+  <div class="container">
+    English
     <div class="toggle-switch" @click="toggleLanguage">
-      <div :class="['toggle-switch__slider', { 'toggle-switch__slider--on': on }]"></div>
+      <div :class="['toggle-switch__slider', { 'toggle-switch__slider--on': on }]">
+      </div>
     </div>
-  </template>
+    French
+  </div>
+</template>
   
   <script>
   export default {
+    props: {
+      lang_select:{
+        type:String,
+        default: 'en'
+      }
+    },
     data() {
       return {
-        language: 'en',
+        on: false,
+        language: this.lang_select,
       };
     },
+
     methods: {
-      toggle() {
-        this.on = !this.on;
-      },
       toggleLanguage() {
+      this.on = !this.on
       this.language = this.language === 'en' ? 'fr' : 'en';
+      this.$emit('change',this.language)
     },
     },
   };
   </script>
   
   <style>
+  .container{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
   .toggle-switch {
     position: relative;
     display: inline-block;
@@ -54,9 +71,7 @@
     transition: 0.4s;
   }
   
-  .toggle-switch__slider--on {
-    background-color: #2196F3;
-  }
+  
   
   .toggle-switch__slider--on::before {
     transform: translateX(16px);

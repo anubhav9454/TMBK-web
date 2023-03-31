@@ -1,8 +1,7 @@
 <template>
   <div id="page-wrapper"> 
     <div>
-      <language-toggle @languageChanged="changeLanguage" />
-    <p>{{ message }}</p>
+      <toggle-switch :lang_select="language" @change="handleChange" />
     </div>
     <!-- Header -->
           <div id="header-wrapper">
@@ -47,12 +46,11 @@
   </div>
 </template>
 <script>
-import { computed } from 'vue';
-import LanguageToggle from './LanguageToggle.vue';
+import ToggleSwitchVue from './ToggleSwitch.vue';
 
   export default {
     components: {
-      LanguageToggle
+      ToggleSwitchVue
     },
     data(){
         return {
@@ -67,17 +65,19 @@ import LanguageToggle from './LanguageToggle.vue';
       check_current(page){
         return this.$store.state.fix.current_page == page
       },
-      changeLanguage(newLanguage) {
+      handleChange(newLanguage) {
       this.language = newLanguage;
+      console.log(this.language)
+      this.$store.commit('fix/set_current_lang', newLanguage);
       }
     },
-    computed:{
-      message() {
-      return this.language === 'fr'
-        ? 'Bonjour, comment ça va?'
-        : 'Hello, how are you?';
-    },
-    },
+    // computed:{
+    //   message() {
+    //   return this.language === 'fr'
+    //     ? 'Bonjour, comment ça va?'
+    //     : 'Hello, how are you?';
+    // },
+    // },
   }
   </script>
   

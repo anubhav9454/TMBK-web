@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    English
+    <div>English</div>
     <div class="toggle-switch" @click="toggleLanguage">
       <div :class="['toggle-switch__slider', { 'toggle-switch__slider--on': on }]">
       </div>
     </div>
-    French
+    <div>French</div>
   </div>
 </template>
   

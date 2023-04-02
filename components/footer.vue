@@ -11,12 +11,13 @@
 										<section class="widget thumbnails">
 											<h3>Gallery</h3>
 											<div class="grid">
-												<div class="row gtr-50">
+                                                <img class="image fit" src="images/detail.png">
+												<!-- <div class="row gtr-50">
 													<div class="col-6"><a href="#" class="image fit"><img src="/images/pic01.jpg" alt="" /></a></div>
 													<div class="col-6"><a href="#" class="image fit"><img src="/images/pic02.jpg" alt="" /></a></div>
                                                     <div class="col-6"><a href="#" class="image fit"><img src="/images/pic03.jpg" alt="" /></a></div>
                                                     <div class="col-6"><a href="#" class="image fit"><img src="/images/pic04.jpg" alt="" /></a></div>                                                    
-												</div>
+												</div> -->
 											</div>
 											<a href="#" class="button icon fa-file-alt">More</a>
 										</section>

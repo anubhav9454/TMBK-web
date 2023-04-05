@@ -1,34 +1,22 @@
 <template>
   <div>
-    <!-- Main -->
     <div id="main-wrapper">
       <div class="container">
         <div class="row gtr-200">
-          <div class="col-4 col-12-medium">
-            <!-- Sidebar -->
+          <div class="col-4 col-12-medium">            
             <div id="sidebar">
               <section class="widget thumbnails">                
                 <div class="grid">
-                  <img class="image fit" src="images/detail.png" />
-                  <!-- <div class="row gtr-50">
-													<div class="col-6"><a href="#" class="image fit"><img src="/images/pic01.jpg" alt="" /></a></div>
-													<div class="col-6"><a href="#" class="image fit"><img src="/images/pic02.jpg" alt="" /></a></div>
-                                                    <div class="col-6"><a href="#" class="image fit"><img src="/images/pic03.jpg" alt="" /></a></div>
-                                                    <div class="col-6"><a href="#" class="image fit"><img src="/images/pic04.jpg" alt="" /></a></div>                                                    
-												</div> -->
+                  <img class="image fit" src="images/detail.png" />                  
                 </div>                
               </section>
             </div>
           </div>
-          <div class="col-8 col-12-medium imp-medium">
-            <!-- Content -->
+          <div class="col-8 col-12-medium imp-medium">            
             <div id="content">
               <section class="last">
                 <h2>About us</h2>
-                <p>
-                  <!-- <b>TMBK BUSINESS Sarl</b> is a company under Congolese law based in the city of Lubumbashi, in the province of Haut-Katanga in the Democratic Republic of Congo since 2017.
-                                                    This company (TMBK BUSINESS) offers services (divided into branches) in several areas including: travel facilitation, construction, rental of construction equipment, drilling of filter wells, supply of goods and equipment and sales of services, placement service .
-                                                    Our experience in these areas produces quality work with great satisfaction. -->
+                <p>                  
                   {{ about_us }}
                 </p>
                 <nuxt-link to="about" class="button icon solid fa-arrow-circle-right"

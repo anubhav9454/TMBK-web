@@ -7,8 +7,7 @@
           <div class="col-4 col-12-medium">
             <!-- Sidebar -->
             <div id="sidebar">
-              <section class="widget thumbnails">
-                <h3>Gallery</h3>
+              <section class="widget thumbnails">                
                 <div class="grid">
                   <img class="image fit" src="images/detail.png" />
                   <!-- <div class="row gtr-50">
@@ -17,8 +16,7 @@
                                                     <div class="col-6"><a href="#" class="image fit"><img src="/images/pic03.jpg" alt="" /></a></div>
                                                     <div class="col-6"><a href="#" class="image fit"><img src="/images/pic04.jpg" alt="" /></a></div>                                                    
 												</div> -->
-                </div>
-                <a href="#" class="button icon fa-file-alt">More</a>
+                </div>                
               </section>
             </div>
           </div>
@@ -33,8 +31,8 @@
                                                     Our experience in these areas produces quality work with great satisfaction. -->
                   {{ about_us }}
                 </p>
-                <a href="#" class="button icon solid fa-arrow-circle-right"
-                  >Continue Reading</a
+                <nuxt-link to="about" class="button icon solid fa-arrow-circle-right"
+                  >Continue Reading</nuxt-link
                 >
               </section>
             </div>
@@ -85,6 +83,7 @@
               </p>
             </section>
           </div>
+          
           <div class="col-3 col-6-medium col-12-small">
             <!-- Links -->
             <section class="widget links">
@@ -98,32 +97,21 @@
               </ul>
             </section>
           </div>
-          <div class="col-3 col-6-medium col-12-small">
+
+          <div class="col-6 col-6-medium col-12-small">
             <!-- Links -->
             <section class="widget links">
-              <h3>Random Stuff</h3>
+              <h3>Services</h3>
               <ul class="style2">
-                <li><a href="#">Etiam feugiat condimentum</a></li>
-                <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-                <li><a href="#">Sed porttitor cras in erat nec</a></li>
-                <li><a href="#">Felis varius pellentesque potenti</a></li>
-                <li><a href="#">Nullam scelerisque blandit leo</a></li>
+                <li>Hassle-free Congolese Passport Facilitation Services</li>
+                <li>Book Your Air Tickets with Ease</li>
+                <li>Easy and Convenient Hotel Booking Worldwide</li>
+                <li>Hassle-free Visa Assistance for Your Travel Needs</li>
+                <li>Accurate and Reliable Document Translation Services</li>
+                <li>Seamless Enrollment Assistance for Studying Abroad</li>
               </ul>
             </section>
-          </div>
-          <div class="col-3 col-6-medium col-12-small">
-            <!-- Links -->
-            <section class="widget links">
-              <h3>Random Stuff</h3>
-              <ul class="style2">
-                <li><a href="#">Etiam feugiat condimentum</a></li>
-                <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-                <li><a href="#">Sed porttitor cras in erat nec</a></li>
-                <li><a href="#">Felis varius pellentesque potenti</a></li>
-                <li><a href="#">Nullam scelerisque blandit leo</a></li>
-              </ul>
-            </section>
-          </div>
+          </div>          
         </div>
       </footer>
 

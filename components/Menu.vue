@@ -2,7 +2,28 @@
   <div id="page-wrapper"> 
     <div>
       <toggle-switch :lang_select="language" @change="handleChange" />
+
+      <div id="google_translate_element" align="right"></div>
+
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en',
+            includedLanguages: 'fr,en',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+            multilanguagePage: true}, 'google_translate_element');
+        } 
+      </script>
+      
+
+      <style>
+        .goog-te-combo {
+          padding: 1px 10px;
+          border-radius: 20px;
+        }
+      </style>
+
     </div>
+
     <!-- Header -->
           <div id="header-wrapper">
             <header id="header" class="container">

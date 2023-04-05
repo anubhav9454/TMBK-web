@@ -1,7 +1,7 @@
 <template>
   <div id="page-wrapper"> 
     <div>
-      <toggle-switch :lang_select="language" @change="handleChange" />
+      <!-- <toggle-switch :lang_select="language" @change="handleChange" /> -->
 
       <div id="google_translate_element" align="right"></div>
 

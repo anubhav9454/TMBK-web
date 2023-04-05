@@ -1,5 +1,18 @@
 <template>
   <div>  
+
+    <div id="banner-wrapper">
+					<div id="banner" class="box container">
+						<div class="row">
+							<div class="col-12 col-12-medium">
+								<h2>Welcome to the world of TMBK.</h2>
+								<p>Please go through our services.</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
     <div id="features-wrapper">
       <div class="container">
         <div class="row">

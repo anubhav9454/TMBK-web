@@ -1,9 +1,7 @@
 <template>
   <div id="page-wrapper"> 
-    <div>
-      <!-- <toggle-switch :lang_select="language" @change="handleChange" /> -->
-
-      <div id="google_translate_element" align="right"></div>
+    <div>      
+      <div id="google_translate_element"></div>
 
       <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -14,14 +12,21 @@
         } 
       </script>
       
-
       <style>
         .goog-te-combo {
           padding: 1px 10px;
           border-radius: 20px;
         }
-      </style>
 
+        #google_translate_element{
+          position: absolute;
+          top : 1px;
+          right : 2px;          
+        }
+
+        
+      </style>
+      
     </div>
 
     <!-- Header -->
@@ -42,7 +47,9 @@
                     <nuxt-link :to="p.link">                        
                       {{ p.name }} 
                     </nuxt-link>
-                    </li>                     
+                    </li>
+
+                    <li>Translate</li>                     
                     
                   </ul>
                 </nav>

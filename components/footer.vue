@@ -125,16 +125,17 @@
             </section>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div id="copyright">
-              <ul class="menu">
-                <li>&copy; TMBK. All rights reserved</li>
-              </ul>
-            </div>
+      </footer>
+
+      <div class="row">
+        <div class="col-12">
+          <div id="copyright">
+            <ul class="menu">
+              <li>&copy; TMBK. All rights reserved</li>
+            </ul>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   </div>
 </template>
@@ -175,5 +176,4 @@ export default {
     },
   },
 };
-
 </script>

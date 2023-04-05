@@ -48,9 +48,7 @@
                       {{ p.name }} 
                     </nuxt-link>
                     </li>
-
-                    <li>Translate</li>                     
-                    
+                                       
                   </ul>
                 </nav>
 

@@ -9,6 +9,14 @@ export const state = () =>({
           link: '/about',
         },
         {
+          name: 'Services',
+          link: '/services',
+        },
+        {
+          name: 'Gallery',
+          link: '/gallery',
+        },
+        {
           name : 'Contact us',
           link : '/contact'
         },
@@ -94,14 +102,27 @@ export const state = () =>({
       content:'Traduction des documents scolaires et administratifs en Anglais, en français, en russe etc.',},
       {image:'/images/x1.jpg',
       content:"Réservation hotel dans le monde",},
+    ],
+    gallery: [
+      '/images/gallery/x.jpg',
+      '/images/gallery/x0.jpg',
+      '/images/gallery/x1.jpg',
+      '/images/gallery/x2.jpg',
+      '/images/gallery/x3.jpg',
+      '/images/gallery/x4.jpg',
+      '/images/gallery/x5.jpg',
+      '/images/gallery/x6.jpg',
+      '/images/gallery/x7.jpg',
+      '/images/gallery/x8.jpg',
+      '/images/gallery/x9.jpg',
+      '/images/gallery/x10.jpg',
+      '/images/gallery/x11.jpg',
+
     ]
   
 })
 
 export const mutations = {
-  get_data(state,element){
-
-  },
   set_current_page(state, element){
     console.log('Changing page-->')
     state.current_page = element

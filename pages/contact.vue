@@ -5,7 +5,11 @@
         <!-- Content -->
         <article>
           <h2>Contact Us</h2>
-          <p>asdasdasdas</p>
+          <p>
+            236, Croisement des avenues des Usines et Kasavubu/ commune de <br/>
+            Lubumbashi +243 99 314 48 90 <br />
+            info@tmbkbusines.com <br />
+          </p>
         </article>       
       </div>
        <div style="height: 330px">

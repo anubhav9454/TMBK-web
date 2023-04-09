@@ -23,8 +23,6 @@ export default {
             required: true
         },
     },
-    // mount(){
-    //     console.log(...data)
-    // }
+
 }
 </script>

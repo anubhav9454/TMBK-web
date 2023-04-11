@@ -118,6 +118,13 @@ export const state = () =>({
       '/images/gallery/x10.jpg',
       '/images/gallery/x11.jpg',
 
+    ],
+    services:[
+      {name: 'Electricité', img:'/images/services/electr.jpg'},
+      {name: 'Maçonnerie', img:'/images/services/maconnerie.jpg'},
+      {name: 'Maçonnerie', img:'/images/services/menui.png'},
+      {name: 'Nettoyage professionnelles', img:'/images/services/nett.png'},
+
     ]
   
 })
